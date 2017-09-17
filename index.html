@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Thinkful Tube API challenge that allows users to search YouTube videos">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thinkful Tube</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+</head>
+
+<body>
+    <main role="main" class="wrapper">
+        <h1><a href="index.html">Thinkful Tube</a></h1>
+        <form action="#" method="get" id="search-form">
+            <label for="search-item">Search Item</label>
+            <input type="text" id="search-item" name="search-item" placeholder="i.e. funny">
+            <button type="submit" id="search-button" value="search">Find videos!</button>
+        </form>
+        <section role="region" id="results-section" class="results">
+            <ul></ul>
+            <div id="listItems-pagination" style="display:none">
+                <a href="#" id="list-items-previous">&laquo; Previous</a>
+                <a href="#" id="list-items-next">Next &raquo;</a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
