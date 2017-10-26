@@ -13,20 +13,20 @@ $(document).ready(function () {
     // STEP TWO - Using input from the user (userInput - or #search-item) make the API call to get the JSON response
     function getResults(userSearchTerm) {
         $.getJSON("https://www.googleapis.com/youtube/v3/search", {
-                part: "snippet",
-                maxResults: 20,
-                key: "AIzaSyCrGFyqH3k1epbj2LLoN-dFHvQ01u2ki40",
-                q: userSearchTerm,
-                type: "video"
-            },
-            function (receivedApiData) {
-                console.log(receivedApiData);
-                if (receivedApiData.pageInfo.totalResults == 0) {
-                    alert("No videos found!");
-                } else {
-                    displaySearchResults(receivedApiData.items);
-                }
-            });
+            part: "snippet",
+            maxResults: 20,
+            key: "AIzaSyCrGFyqH3k1epbj2LLoN-dFHvQ01u2ki40",
+            q: userSearchTerm,
+            type: "video"
+        },
+        function (receivedApiData) {
+            console.log(receivedApiData);
+            if (receivedApiData.pageInfo.totalResults == 0) {
+                alert("No videos found!");
+            } else {
+                displaySearchResults(receivedApiData.items);
+            }
+        });
     }
 
 
